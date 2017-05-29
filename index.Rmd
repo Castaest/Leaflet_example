@@ -1,7 +1,7 @@
 ---
 title: "Lovely places I visited"
 author: "Alex Butylev"
-date: '28 may 2017'
+date: '28 May 2017'
 output: html_document
 ---
 
