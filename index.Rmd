@@ -1,7 +1,7 @@
 ---
 title: "Lovely places I visited"
 author: "Alex Butylev"
-date: '28 ??? 2017 ? '
+date: '28 may 2017'
 output: html_document
 ---
 
@@ -31,4 +31,3 @@ photoIcon <- makeIcon(
                                                     icon = photoIcon)
   my_map
 ```
-
