@@ -1,0 +1,34 @@
+---
+title: "Lovely places I visited"
+author: "Alex Butylev"
+date: '28 ??? 2017 ? '
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(leaflet)
+places = data.frame(lat = c(49.81, 52.26, 43.47, 42.14),
+                    lng = c(86.60, 105.70, 41.22, 80.10),
+                    name = c("<a href = 'https://cloud.mail.ru/public/7Qa5/EMmSnf7mi'>Belukha 2000</a>",
+                             "<a href = 'https://cloud.mail.ru/public/HDgu/855CMd3WZ'>Baikal 2001</a>",
+                             "<a href = 'https://cloud.mail.ru/public/L75P/syndovc2G'>Arkhiz 2002</a>",
+                             "<a href = 'https://cloud.mail.ru/public/CcmQ/wmb8rmLec'>Khan-Tengri 2003</a>"))
+photoIcon <- makeIcon(
+  iconUrl = 'photo.png', 
+  iconWidth = 31*215/230,
+  iconHeight = 31,
+  iconAnchorX = 31*215/230/2,
+  iconAnchorY = 16
+)
+```
+
+#### Click the photos and enjoy :)
+
+
+```{r map}
+  my_map <- leaflet() %>% addTiles() %>% addMarkers(lat = places$lat, lng = places$lng, popup = places$name, 
+                                                    icon = photoIcon)
+  my_map
+```
+
