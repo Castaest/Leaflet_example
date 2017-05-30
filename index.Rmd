@@ -8,12 +8,31 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(leaflet)
-places = data.frame(lat = c(49.81, 52.26, 43.47, 42.14),
-                    lng = c(86.60, 105.70, 41.22, 80.10),
+places = data.frame(lat = c(49.81, 52.26, 43.47, 42.14, 28.00, 43.96, 44.49, -3.07, -6.32, 43.81, -0.71, -0.47, 55.74, -36.46, -16.92, -45.03, 15.15, 31.04, 37.8, 48.81, 40.08, 1.34, 4.59),
+                    lng = c(86.60, 105.70, 41.22, 80.10, 86.82, 39.88, 34.06, 37.36, 39.55, 40.91, -79.04, -90.30, 160.26, 148.28, 145.80, 168.64, 73.94, -7.92, 135.24, 14.30, 22.37, 103.71, 118.86),
                     name = c("<a href = 'https://cloud.mail.ru/public/7Qa5/EMmSnf7mi'>Belukha 2000</a>",
                              "<a href = 'https://cloud.mail.ru/public/HDgu/855CMd3WZ'>Baikal 2001</a>",
                              "<a href = 'https://cloud.mail.ru/public/L75P/syndovc2G'>Arkhiz 2002</a>",
-                             "<a href = 'https://cloud.mail.ru/public/CcmQ/wmb8rmLec'>Khan-Tengri 2003</a>"))
+                             "<a href = 'https://cloud.mail.ru/public/CcmQ/wmb8rmLec'>Khan-Tengri 2003</a>",
+                             "<a href = 'https://cloud.mail.ru/public/3vHn/esEQZ4aEP'>Everest 2004</a>",
+                             "<a href = 'https://cloud.mail.ru/public/JiK9/QEUEEDms3'>Fisht 2004</a>",
+                             "<a href = 'https://cloud.mail.ru/public/DS1j/w7T3qQxr4'>Crimea 2005</a>",
+                             "<a href = 'https://cloud.mail.ru/public/JZwf/VYPq4SB6W'>KLMN 2006</a>",
+                             "<a href = 'https://cloud.mail.ru/public/C1Hy/j2VmTDXnQ'>Zanzibar 2006</a>",
+                             "<a href = 'https://cloud.mail.ru/public/K3wX/Cbyzh5DU3'>Caucasus 2006</a>",
+                             "<a href = 'https://cloud.mail.ru/public/MEEY/ruwK6ynez'>Andes 2007</a>",
+                             "<a href = 'https://cloud.mail.ru/public/2pEC/DBrbn7Ert'>Galapagos 2007</a>",
+                             "<a href = 'https://cloud.mail.ru/public/EyGe/dPDtkgWU8'>Kamchatka 2007</a>",
+                             "<a href = 'https://cloud.mail.ru/public/8yc6/8KndDJU2m'>Blue Mountains 2008</a>",
+                             "<a href = 'https://cloud.mail.ru/public/3hTu/KYb8co39p'>Cairns 2008</a>",
+                             "<a href = 'https://cloud.mail.ru/public/81Rg/DdVQftFTy'>South Island 2008</a>",
+                             "<a href = 'https://cloud.mail.ru/public/71wc/BwVY3uTvn'>Goa 2009</a>",
+                             "<a href = 'https://cloud.mail.ru/public/15cj/W4Gs9xKQq'>Toubkal 2012</a>",
+                             "<a href = 'https://cloud.mail.ru/public/7dfx/pQfDddQWT'>Japan 2013</a>",
+                             "<a href = 'https://cloud.mail.ru/public/EEss/cSLEekdqw'>Krumlov 2014</a>", 
+                             "<a href = 'https://cloud.mail.ru/public/H4Cz/rJLCcah8S'>Olympus 2015</a>",
+                             "<a href = 'https://cloud.mail.ru/public/6vf5/qeNsiS8Bc'>Singapore 2016</a>",
+                             "<a href = 'https://cloud.mail.ru/public/KF3E/tuwTmyrCz'>Pom-Pom 2016</a>"))
 photoIcon <- makeIcon(
   iconUrl = 'photo.png', 
   iconWidth = 31*215/230,
